@@ -2,11 +2,10 @@ package springbootpart3;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-import springbootpart3.FakeRepo;
-import springbootpart3.UserService;
 
 @Service
 public  class UserServiceImpl implements UserService {
+
 
 
 
@@ -44,4 +43,6 @@ public  class UserServiceImpl implements UserService {
 
         return fakeRepo.findUserById(Id);
     }
+
+
 }

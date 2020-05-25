@@ -3,8 +3,10 @@ package springbootpart3;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 import springbootpart3.wsdl.*;
 
 import java.net.MalformedURLException;
@@ -21,6 +23,15 @@ public class MyApplication {
         SpringApplication.run(MyApplication.class, args);
 
 
+
+//        UserController userController=new UserController();
+//        userController.GitApi();
+    }
+
+    @Bean
+    public RestTemplate GitApi(RestTemplateBuilder builder){
+
+        return builder.build();
     }
 
 
@@ -48,6 +59,7 @@ public class MyApplication {
 
         return null;
     }
+
 
 }
 
