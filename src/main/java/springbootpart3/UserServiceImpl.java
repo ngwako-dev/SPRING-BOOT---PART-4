@@ -44,5 +44,20 @@ public  class UserServiceImpl implements UserService {
         return fakeRepo.findUserById(Id);
     }
 
+//    public String gitApi(){
+//
+//
+//        RestTemplate restTemplate=new RestTemplate();
+//
+//        String url="https://api.github.com";
+//
+//        ResponseEntity<String> response = restTemplate.getForEntity(url+"/users/Ngwako-dev/repos", String.class);
+//        System.out.println("response "+response.toString());
+//
+//
+//        return response.toString();
+//
+//    }
+
 
 }
